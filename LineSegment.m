@@ -17,6 +17,12 @@ classdef LineSegment
             l = line.Start.distance(line.Finish);
         end
         
+        function display(line)
+            % Does it display when a lineSeg object is initilized 
+            figure;
+            plot([line.Start.X, line.Finish.X], [line.Start.Y, line.Finish.Y])
+        end
+        
     end
     
 end
