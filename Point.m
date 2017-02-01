@@ -19,6 +19,13 @@ classdef Point
             d = sqrt((pt1.x - pt2.x)^2 + (pt1.y - pt2.y)^2);
         end
         
+        function r = plus(pt1, pt2)
+            r = Point(pt1.x + pt2.x, pt1.y + pt2.y);
+        end
+        
+        function r = minus(pt1, pt2)
+            r = Point(pt1.x - pt2.x, pt1.y - pt2.y);
+        end
     end
     
 end
