@@ -1,6 +1,29 @@
 classdef Point
-    %UNTITLED Summary of this class goes here
-    %   Detailed explanation goes here
+    % Elton Shon  SID:23696287  E177  Spring 2017
+    % 
+    % Point class:
+    %
+    % properties: x = 0
+    %             y = 0 by default
+    %
+    % To instantiate a Point object with default X, Y values: pt = Point
+    % To instantiate a Point object with other X, Y values: pt = Point(x, y) 
+    % 
+    % Class method:
+    % 
+    % distance: It calculates distance between two points by calling
+    %           distance(pt1, pt2) or pt1.distance(pt2)
+    %
+    % plus: It adds two points and returns a point whose X and Y 
+    %       are the sum of the respective properties in pt1 and pt2. 
+    %       ex: pt3 = pt1 + pt2
+    % 
+    % minus: It subtracts pt2 from pt1 and returns a point whose X and Y 
+    %        are the difference of the respective properties in pt1 and pt2.
+    %        ex: pt3 = pt1 - pt2
+    %
+    % display: Displays the point object as an ordered pair “pt = <x,y>” 
+    %          ex: pt or display(pt) or pt.display
     
     properties
         X = 0;
