@@ -1,6 +1,26 @@
 classdef LineSegment
-    %UNTITLED3 Summary of this class goes here
-    %   Detailed explanation goes here
+    % Elton Shon  SID:23696287  E177  Spring 2017
+    %
+    % LineSegment Class:
+    %
+    % Properites: Start
+    %             Finish (Properties can only be assigned with Point objects)
+    % 
+    % To instantiate a LineSegment object with two Point objects: LineSegment(pt1,pt2)
+    % 
+    % Set methods check and make sure only Point objects are assigned to 
+    % class properties, or it shows error messages.
+    %
+    % Class method:
+    % 
+    % length: Returns the length of the line segment. 
+    %         ex: line.length or length(line)
+    %             where line is a LineSegment object
+    % 
+    % display: Plots the line connecting the Start and Finish
+    %          ex: display(line) or line.display or line 
+    %              where line is a LineSegment object
+
     
     properties
         Start
@@ -16,6 +36,7 @@ classdef LineSegment
         function line = set.Start(line, obj)
             % why cant this be inplemented in constructor?
             % what exactly is set.Property
+            % is this considered class method?
             if isa(obj, 'Point')
                 line.Start = obj;
             else
@@ -40,8 +61,6 @@ classdef LineSegment
             figure;
             plot([line.Start.X, line.Finish.X], [line.Start.Y, line.Finish.Y])
         end
-        
     end
-    
 end
 
