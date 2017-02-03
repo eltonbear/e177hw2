@@ -40,7 +40,7 @@ classdef LineSegment
             if isa(obj, 'Point')
                 line.Start = obj;
             else
-                error('Properties must be Point objects')
+                error('Input arguments must be Point objects')
             end
         end
         
@@ -48,7 +48,7 @@ classdef LineSegment
             if isa(obj, 'Point')
                 line.Finish = obj;
             else
-                error('Properties must be Point objects')
+                error('Input arguments must be Point objects')
             end
         end
         
