@@ -34,10 +34,7 @@ classdef LineSegment
         end
         
         function line = set.Start(line, obj)
-            % why cant this be inplemented in constructor?
-            % what exactly is set.Property
-            % is this considered class method?
-            if isa(obj, 'Point')
+            if isa(obj, 'Point') % Check if it's an instance of Point
                 line.Start = obj;
             else
                 error('Input arguments must be Point objects')
@@ -45,7 +42,7 @@ classdef LineSegment
         end
         
         function line = set.Finish(line, obj)
-            if isa(obj, 'Point')
+            if isa(obj, 'Point') 
                 line.Finish = obj;
             else
                 error('Input arguments must be Point objects')
@@ -57,8 +54,7 @@ classdef LineSegment
         end
         
         function display(line)
-            % Does it display when a lineSeg object is initilized? 
-            figure;
+            figure; % Plot a line from Start to Finish
             plot([line.Start.X, line.Finish.X], [line.Start.Y, line.Finish.Y])
         end
     end

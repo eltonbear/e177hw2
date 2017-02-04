@@ -32,7 +32,7 @@ classdef Point
     
     methods
         function obj = Point(xval,yval)
-            if nargin > 0
+            if nargin > 0 % Number of input arguments 
                 obj.X = xval;
                 obj.Y = yval;
             end
